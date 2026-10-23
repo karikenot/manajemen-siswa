@@ -6,6 +6,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/oki', function () {
-    return view('beranda');
-});
+
+Route::view('/', 'beranda')->name('beranda');
