@@ -1,10 +1,14 @@
 <?php
 
-use App\Http\Controllers\AiController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AiController;
 
 Route::get('/', function () {
     return view('welcome');
+});
+
+Route::get('/chat', function () {
+    return view('chat');
 });
 
 
