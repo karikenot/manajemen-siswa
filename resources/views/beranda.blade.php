@@ -114,8 +114,8 @@
                                 Melihat ringkasan jumlah siswa, guru, dan kelas.
                             </p>
 
-                            <span class="badge text-bg-secondary">
-                                Direncanakan
+                            <span class="badge text-bg-secondary" id="statusDashboard">
+                                
                             </span>
                         </div>
                     </div>

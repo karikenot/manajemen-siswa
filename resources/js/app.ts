@@ -3,3 +3,9 @@
 let greet: string = "halo pembuka console";
 
 console.log(greet);
+
+const statusDashboard = document.getElementById("statusDashboard") as HTMLSpanElement | null;
+
+if(statusDashboard) {
+    statusDashboard.innerText = `Dibangun`;
+}
