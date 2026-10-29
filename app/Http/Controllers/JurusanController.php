@@ -39,4 +39,21 @@ class JurusanController extends Controller
     public function edit(Jurusan $jurusan) {
         return view("jurusan.edit", compact('jurusan'));
     }
+
+    public function update(Request $request, Jurusan $jurusan) {
+        $validated = $request->validate([
+            'kode_jurusan' => [
+                'required', 'string', 'max:20', 'alpha_dash',
+                Rule::unique('jurusan', 'kode_jurusan')->ignore($jurusan->id),
+            ],
+            'nama_jurusan' => ['required', 'string', 'max:100'],
+        ], [
+            'kode_jurusan.required' => 'Kode jurusan wajib diisi',
+            'kode_jurusan.alpha_dash' => 'Kode hanya boleh memakai huruf, angka, - atau _.',
+            'kode_jurusan_unique' => 'Kode jurusan sudah digunakan',
+            'nama_jurusan.required' => 'Nama jurusan wajib diisi',
+        ]);
+
+        $jurusan->update($validated);
+    }
 }
