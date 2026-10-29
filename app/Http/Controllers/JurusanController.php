@@ -35,4 +35,8 @@ class JurusanController extends Controller
         return redirect()->route('jurusan.index')
             ->with('success', 'Data jurusan berhasil diatambahkan');
     }
+
+    public function edit(Jurusan $jurusan) {
+        return view("jurusan.edit", compact('jurusan'));
+    }
 }
