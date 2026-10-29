@@ -29,5 +29,10 @@ class JurusanController extends Controller
             'kode_jurusan_unique' => 'Kode jurusan sudah digunakan',
             'nama_jurusan.required' => 'Nama jurusan wajib diisi',
         ]);
+
+        Jurusan::create($validated);
+
+        return redirect()->route('jurusan.index')
+            ->with('success', 'Data jurusan berhasil diatambahkan');
     }
 }
