@@ -214,6 +214,29 @@
             </div>
             
         </section>
+
+        <section id="alur-belajar" class="mt-5">
+            <div class="bg-white border rounded-4 p-4 p-md-5">
+                <h2 class="fw-bold">Perjalanan Belajar Kita</h2>
+
+                <p class="text-secondary">
+                    Kita akan membangun aplikasi ini dsedikit demi sedikit, bukan langusng membuat semua fitur sekaligus.
+                </p>
+
+                <div class="row g-3 mt-2">
+                    <p class="mb-0">
+                        Menghubungkan dartabase dan membuat fitur pengelolaan sekolah
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <footer class="text-center text-secondary small mt-5">
+            Aplikasi manajemen Sekolah Sederhana
+            <br>
+            Proyek pembelajaran laravel kelas XI RPL/PPLG
+        </footer>
+        
     </main>
 
     @vite(['resources/js/app.ts'])
