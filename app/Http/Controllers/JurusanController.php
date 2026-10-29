@@ -12,4 +12,8 @@ class JurusanController extends Controller
         $jurusans = Jurusan::orderBy('nama_jurusan')->get();
         return view('jurusan.index', compact('jurusans'));
     }
+
+    public function create() {
+        return view('jurusan.create');
+    }
 }
