@@ -55,5 +55,8 @@ class JurusanController extends Controller
         ]);
 
         $jurusan->update($validated);
+
+        return redirect()->route('jurusan.index')
+            ->with('success', "Data jurusan berhasil di erbarui");
     }
 }
